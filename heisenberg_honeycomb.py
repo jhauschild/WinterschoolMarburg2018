@@ -47,7 +47,7 @@ def run(chi_mps, chi_tps, h, n_imaginary, n_boundary):
 
     ################################# Expectation values
     d = G[0].shape[0]
-    for chi_boundary in range(5, chi_mps, 5) + 2 * [chi_mps]:
+    for chi_boundary in list(range(5, chi_mps, 5)) + 2 * [chi_mps]:
         expval_list = [[], []]
 
         for bond in [0, 1, 2]:
